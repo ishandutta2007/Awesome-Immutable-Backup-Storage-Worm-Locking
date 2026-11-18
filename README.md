@@ -245,3 +245,12 @@ Star the repo if you find it useful!
 **Made for backup architects, security teams, storage engineers, and open-source advocates.**
 
 Let's keep backup data immutable, recoverable, and as open as practical.
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Immutable-Backup-Storage-Worm-Locking&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Immutable-Backup-Storage-Worm-Locking_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Immutable-Backup-Storage-Worm-Locking_growth.svg">
+  </picture>
+</a>
