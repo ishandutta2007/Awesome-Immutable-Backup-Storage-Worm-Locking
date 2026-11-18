@@ -1,6 +1,8 @@
 # Awesome-Immutable-Backup-Storage-Worm-Locking
 
-# Awesome-Immutable-Backup-Storage-Worm-Locking
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Immutable Backup Storage & WORM Locking Banner" width="100%">
+</p>
 
 ## Top Immutable Backup Storage & WORM Locking Ecosystem
 

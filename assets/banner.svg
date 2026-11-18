@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14" />
+      <stop offset="50%" stop-color="#0A1628" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#4FACFE" />
+    </linearGradient>
+
+    <linearGradient id="emeraldShield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="goldLock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <radialGradient id="glowOrb1" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowOrb2" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Patterns -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.8" stroke-opacity="0.4" />
+      <circle cx="40" cy="40" r="1" fill="#38BDF8" fill-opacity="0.25" />
+    </pattern>
+
+    <!-- Drop Shadows -->
+    <filter id="shadowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* Pulse and flow animations */
+    @keyframes pulseOrb {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.7; }
+      50% { transform: scale(1.15) translate(20px, -15px); opacity: 1; }
+    }
+    @keyframes dashStream {
+      to { stroke-dashoffset: -100; }
+    }
+    @keyframes radarSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes floatPill {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes shieldGlow {
+      0%, 100% { filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.4)); }
+      50% { filter: drop-shadow(0 0 18px rgba(0, 242, 254, 0.75)); }
+    }
+
+    .orb-animated-1 { animation: pulseOrb 12s ease-in-out infinite alternate; transform-origin: 200px 100px; }
+    .orb-animated-2 { animation: pulseOrb 15s ease-in-out infinite alternate-reverse; transform-origin: 1000px 300px; }
+    .stream-line { stroke-dasharray: 6, 6; animation: dashStream 3s linear infinite; }
+    .stream-line-fast { stroke-dasharray: 8, 8; animation: dashStream 1.8s linear infinite; }
+    .radar-circle { transform-origin: 1060px 140px; animation: radarSpin 24s linear infinite; }
+    .pill-1 { animation: floatPill 4s ease-in-out infinite; }
+    .pill-2 { animation: floatPill 4.5s ease-in-out infinite 0.7s; }
+    .pill-3 { animation: floatPill 5s ease-in-out infinite 1.4s; }
+    .pill-4 { animation: floatPill 4.2s ease-in-out infinite 2.1s; }
+    .shield-badge { animation: shieldGlow 3.5s ease-in-out infinite; }
+
+    .brand-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.5px;
+    }
+    .brand-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+    }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+  <rect width="1200" height="420" fill="url(#grid)" />
+
+  <!-- Dynamic Glowing Orbs in Background -->
+  <g class="orb-animated-1">
+    <circle cx="180" cy="110" r="220" fill="url(#glowOrb1)" />
+  </g>
+  <g class="orb-animated-2">
+    <circle cx="1020" cy="310" r="260" fill="url(#glowOrb2)" />
+  </g>
+  <circle cx="600" cy="200" r="300" fill="url(#centerGlow)" />
+
+  <!-- Background Animated Network / WORM Circuit Lines -->
+  <g opacity="0.45">
+    <!-- Curved connection lines behind foreground -->
+    <path d="M 80 80 Q 300 30 600 70 T 1120 80" fill="none" stroke="#0284C7" stroke-width="1.5" class="stream-line" />
+    <path d="M 50 350 Q 400 400 700 340 T 1150 350" fill="none" stroke="#10B981" stroke-width="1.5" class="stream-line-fast" />
+    <path d="M 120 180 Q 250 320 500 360" fill="none" stroke="#6366F1" stroke-width="1.2" stroke-dasharray="4, 4" />
+    <path d="M 700 80 Q 950 110 1080 260" fill="none" stroke="#00F2FE" stroke-width="1.2" stroke-dasharray="5, 5" class="stream-line" />
+  </g>
+
+  <!-- Subtle Cyber Tech Rings in Top-Right Background -->
+  <g class="radar-circle" opacity="0.3">
+    <circle cx="1060" cy="140" r="70" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="8, 6" />
+    <circle cx="1060" cy="140" r="95" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="3, 7" />
+    <circle cx="1060" cy="140" r="120" fill="none" stroke="#0369A1" stroke-width="1" stroke-dasharray="12, 12" />
+  </g>
+
+  <!-- Decorative Corner Nodes -->
+  <g opacity="0.6">
+    <circle cx="80" cy="80" r="3" fill="#00F2FE" />
+    <circle cx="80" cy="80" r="7" fill="none" stroke="#00F2FE" stroke-width="1" opacity="0.5" />
+    <circle cx="1120" cy="80" r="3" fill="#10B981" />
+    <circle cx="1120" cy="80" r="7" fill="none" stroke="#10B981" stroke-width="1" opacity="0.5" />
+    <circle cx="50" cy="350" r="3" fill="#38BDF8" />
+    <circle cx="1150" cy="350" r="3" fill="#A855F7" />
+  </g>
+
+  <!-- FOREGROUND LAYER: Banner Header, Content & Badges (Completely clear, unblocked) -->
+  <g id="foreground-content">
+
+    <!-- Top Category Label -->
+    <g transform="translate(600, 75)">
+      <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1.2" filter="url(#shadowFilter)" />
+      <circle cx="-118" cy="0" r="5" fill="#10B981" />
+      <circle cx="-118" cy="0" r="9" fill="none" stroke="#10B981" stroke-width="1" opacity="0.5">
+        <animate attributeName="r" values="5;11;5" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0.1;0.8" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="-98" y="4" fill="#94A3B8" class="pill-text" font-size="11" font-weight="700" letter-spacing="1.2">ENTERPRISE RESILIENCE ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title with Distinct Shield & Lock Icon -->
+    <g transform="translate(600, 145)">
+      <!-- Central Shield Icon with Lock -->
+      <g class="shield-badge" transform="translate(0, -18)">
+        <!-- Outer Shield -->
+        <path d="M 0 -28 L 24 -16 L 24 10 C 24 24 0 34 0 34 C 0 34 -24 24 -24 10 L -24 -16 Z" 
+              fill="url(#emeraldShield)" opacity="0.95" />
+        <!-- Inner Shield Accent -->
+        <path d="M 0 -23 L 19 -13 L 19 8 C 19 19 0 28 0 28 C 0 28 -19 19 -19 8 L -19 -13 Z" 
+              fill="#064E3B" opacity="0.8" />
+        <!-- Lock Symbol inside Shield -->
+        <rect x="-7" y="-2" width="14" height="12" rx="2" fill="url(#goldLock)" />
+        <path d="M -5 -2 L -5 -7 C -5 -10 5 -10 5 -7 L 5 -2" fill="none" stroke="#FDE68A" stroke-width="2" stroke-linecap="round" />
+        <circle cx="0" cy="3" r="1.5" fill="#78350F" />
+      </g>
+
+      <!-- Main Headline Text -->
+      <text x="0" y="52" text-anchor="middle" class="brand-title" fill="#FFFFFF" filter="url(#shadowFilter)">
+        Awesome <tspan fill="url(#cyberCyan)">Immutable Backup Storage</tspan>
+      </text>
+      <!-- Sub-headline Emphasis -->
+      <text x="0" y="86" text-anchor="middle" class="brand-title" font-size="28" fill="#F8FAFC" opacity="0.95">
+        &amp; <tspan fill="#34D399">WORM Locking</tspan>
+      </text>
+    </g>
+
+    <!-- Subtitle / Mission Statement -->
+    <text x="600" y="270" text-anchor="middle" class="brand-subtitle" fill="#94A3B8">
+      Curated Guide to <tspan fill="#38BDF8" font-weight="600">Write-Once-Read-Many (WORM)</tspan>, Object Lock, Air-Gapped Retention &amp; Hardened Vaults
+    </text>
+
+    <!-- Feature Pills / Badges (Floating softly without covering main text) -->
+    <g id="feature-pills" transform="translate(600, 335)">
+      
+      <!-- Pill 1: Ransomware-Proof -->
+      <g class="pill-1" transform="translate(-390, 0)">
+        <rect x="-75" y="-18" width="150" height="36" rx="18" fill="#0F172A" stroke="#00F2FE" stroke-width="1.2" stroke-opacity="0.8" filter="url(#shadowFilter)" />
+        <circle cx="-55" cy="0" r="4" fill="#00F2FE" />
+        <text x="-43" y="4" fill="#E2E8F0" class="pill-text">Ransomware-Proof</text>
+      </g>
+
+      <!-- Pill 2: Object Lock & Compliance -->
+      <g class="pill-2" transform="translate(-130, 0)">
+        <rect x="-95" y="-18" width="190" height="36" rx="18" fill="#0F172A" stroke="#10B981" stroke-width="1.2" stroke-opacity="0.8" filter="url(#shadowFilter)" />
+        <circle cx="-75" cy="0" r="4" fill="#10B981" />
+        <text x="-63" y="4" fill="#E2E8F0" class="pill-text">S3 Object Lock &amp; WORM</text>
+      </g>
+
+      <!-- Pill 3: SaaS & Cloud Platforms -->
+      <g class="pill-3" transform="translate(130, 0)">
+        <rect x="-95" y="-18" width="190" height="36" rx="18" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.8" filter="url(#shadowFilter)" />
+        <circle cx="-75" cy="0" r="4" fill="#38BDF8" />
+        <text x="-63" y="4" fill="#E2E8F0" class="pill-text">Cloud &amp; SaaS Platforms</text>
+      </g>
+
+      <!-- Pill 4: Open-Source Hardened -->
+      <g class="pill-4" transform="translate(390, 0)">
+        <rect x="-90" y="-18" width="180" height="36" rx="18" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.2" stroke-opacity="0.8" filter="url(#shadowFilter)" />
+        <circle cx="-70" cy="0" r="4" fill="#A855F7" />
+        <text x="-58" y="4" fill="#E2E8F0" class="pill-text">Hardened Open Source</text>
+      </g>
+
+    </g>
+
+    <!-- Bottom Tech Tags / Quick Highlights -->
+    <g transform="translate(600, 390)">
+      <text x="0" y="0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="11" fill="#64748B" letter-spacing="1">
+        AWS S3 OBJECT LOCK • AZURE IMMUTABLE • MINIO • CEPH • VEEAM HARDENED • RESTIC • ZFS • SNAPLOCK
+      </text>
+    </g>
+
+  </g>
+</svg>
